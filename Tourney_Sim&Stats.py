@@ -160,7 +160,7 @@ def predict_winner(team1, team2):
     return team1 if model_predictions[0] > 0.5 else team2
 """
 
-# Define weights manually (adjust as needed based on performance or intuition)
+# Define weights manually (adjust as needed based on data properties (metrics, SIZE,..), model performance, etc.)
 model_weights = {
     'Logistic Regression': 0.3,
     'Naive Bayes': 0.3,
@@ -352,6 +352,7 @@ print("\n📊 Team Advancement Summary (R64 to Champion):")
 for team, rounds in advancement.items():
     print(f"{team}: {[f'{c/N_SIMULATIONS:.0%}' for c in rounds]}")
 #%%
+#####====== PLOTS & GRAPHICS ==========####
 
 import matplotlib.pyplot as plt
 import seaborn as sns
